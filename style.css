@@ -35,7 +35,7 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
   margin-right: 20px; /* Space between icons */
-  margin-top: 10px; /* Move icons down slightly */
+  margin-top: 20px; /* Move icons down slightly */
 }
 
 .icon:hover {
