@@ -1,1 +1,108 @@
-<iframe src="https://lolpoperman.github.io/beezeedoesunblock/drive-mad" style="width: 100%; height: 100%;">Browser does not support Iframes</iframe>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird with Home Button, Label, Divider, and Header Background</title>
+    <style>
+        /* Container for the header section, including the home button, label, and background */
+        .header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px; /* Same height as the divider position */
+            background-color: #333; /* Slightly lighter black */
+            z-index: 999;
+        }
+
+        /* Container to hold both the home button and label */
+        .top-bar {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        /* Style for the home button */
+        .home-btn {
+            padding: 10px 20px;
+            background-color: #484848;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .home-btn:hover {
+            background-color: #505050;
+        }
+
+        /* Style for the label next to the home button */
+        .label {
+            font-size: 24px;
+            font-weight: bold;
+            color: white; /* Changed to white */
+            margin-left: 15px;
+        }
+
+        /* Horizontal line */
+        .divider {
+            position: absolute;
+            top: 60px; /* Position it right under the home button and label */
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: black;
+            z-index: 999;
+        }
+
+        /* Style to ensure iframe covers the full page */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header section with background -->
+    <div class="header">
+        <!-- Container for home button and label -->
+        <div class="top-bar">
+            <!-- Home button -->
+            <button class="home-btn" onclick="window.location.href='https://lolpoperman.github.io/beezeedoesunblock/'">
+                Home
+            </button>
+
+            <!-- Label next to the home button -->
+            <div class="label">
+                Beezee Games
+            </div>
+        </div>
+    </div>
+
+    <!-- Horizontal line under the home button and label -->
+    <div class="divider"></div>
+
+    <!-- Iframe with the game -->
+    <iframe src="https://lolpoperman.github.io/beezeedoesunblock/drive-mad">
+        Browser does not support Iframes
+    </iframe>
+
+</body>
+</html>
