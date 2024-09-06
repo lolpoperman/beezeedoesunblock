@@ -1,1 +1,59 @@
-<iframe src="https://lolpoperman.github.io/beezeedoesunblock/geodash" style="width: 100%; height: 100%;">Browser does not support Iframes</iframe>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird with Home Button</title>
+    <style>
+        /* Style for the button */
+        .home-btn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 1000;
+        }
+
+        .home-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Style to ensure iframe covers the full page */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Home button -->
+    <button class="home-btn" onclick="window.location.href='https://lolpoperman.github.io/beezeedoesunblock/'">
+        Home
+    </button>
+
+    <!-- Iframe with the game -->
+    <iframe src="https://lolpoperman.github.io/beezeedoesunblock/geodash">
+        Browser does not support Iframes
+    </iframe>
+
+</body>
+</html>
+
