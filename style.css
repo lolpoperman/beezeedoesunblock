@@ -50,6 +50,7 @@ body {
   height: 100px;
   object-fit: cover;
   transition: transform 0.3s ease;
+  border-radius: 15px; /* Rounded corners */
 }
 
 .icon:hover {
