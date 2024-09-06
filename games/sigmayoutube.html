@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flappy Bird with Home Button and Label</title>
+    <title>Flappy Bird with Home Button, Label, and Divider Line</title>
     <style>
         /* Container to hold both the home button and label */
         .top-bar {
@@ -38,6 +38,17 @@
             margin-left: 15px;
         }
 
+        /* Horizontal line */
+        .divider {
+            position: absolute;
+            top: 60px; /* Position it right under the home button and label */
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: black;
+            z-index: 999;
+        }
+
         /* Style to ensure iframe covers the full page */
         body, html {
             margin: 0;
@@ -70,6 +81,9 @@
             Beezee Games
         </div>
     </div>
+
+    <!-- Horizontal line under the home button and label -->
+    <div class="divider"></div>
 
     <!-- Iframe with the game -->
     <iframe src="https://lolpoperman.github.io/beezeedoesunblock/flappy-bird/">
