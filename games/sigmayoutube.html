@@ -3,8 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flappy Bird with Home Button, Label, and Divider Line</title>
+    <title>Flappy Bird with Home Button, Label, Divider, and Header Background</title>
     <style>
+        /* Container for the header section, including the home button, label, and background */
+        .header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px; /* Same height as the divider position */
+            background-color: #333; /* Slightly lighter black */
+            z-index: 999;
+        }
+
         /* Container to hold both the home button and label */
         .top-bar {
             position: absolute;
@@ -34,7 +45,7 @@
         .label {
             font-size: 24px;
             font-weight: bold;
-            color: black;
+            color: white; /* Changed to white */
             margin-left: 15px;
         }
 
@@ -69,16 +80,19 @@
 </head>
 <body>
 
-    <!-- Container for home button and label -->
-    <div class="top-bar">
-        <!-- Home button -->
-        <button class="home-btn" onclick="window.location.href='https://lolpoperman.github.io/beezeedoesunblock/'">
-            Home
-        </button>
+    <!-- Header section with background -->
+    <div class="header">
+        <!-- Container for home button and label -->
+        <div class="top-bar">
+            <!-- Home button -->
+            <button class="home-btn" onclick="window.location.href='https://lolpoperman.github.io/beezeedoesunblock/'">
+                Home
+            </button>
 
-        <!-- Label next to the home button -->
-        <div class="label">
-            Beezee Games
+            <!-- Label next to the home button -->
+            <div class="label">
+                Beezee Games
+            </div>
         </div>
     </div>
 
