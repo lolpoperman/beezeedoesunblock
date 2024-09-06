@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flappy Bird with Home Button and Label</title>
     <style>
-        /* Style for the home button */
-        .home-btn {
+        /* Container to hold both the home button and label */
+        .top-bar {
             position: absolute;
             top: 10px;
             left: 10px;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        /* Style for the home button */
+        .home-btn {
             padding: 10px 20px;
             background-color: #007BFF;
             color: white;
@@ -17,23 +24,18 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
-            z-index: 1000;
         }
 
         .home-btn:hover {
             background-color: #0056b3;
         }
 
-        /* Style for the label at the top center */
+        /* Style for the label next to the home button */
         .label {
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
             font-size: 24px;
             font-weight: bold;
             color: black;
-            z-index: 1000;
+            margin-left: 15px;
         }
 
         /* Style to ensure iframe covers the full page */
@@ -56,14 +58,17 @@
 </head>
 <body>
 
-    <!-- Home button -->
-    <button class="home-btn" onclick="window.location.href='https://lolpoperman.github.io/beezeedoesunblock/'">
-        Home
-    </button>
+    <!-- Container for home button and label -->
+    <div class="top-bar">
+        <!-- Home button -->
+        <button class="home-btn" onclick="window.location.href='https://lolpoperman.github.io/beezeedoesunblock/'">
+            Home
+        </button>
 
-    <!-- Top center label -->
-    <div class="label">
-        Beezee Games
+        <!-- Label next to the home button -->
+        <div class="label">
+            Beezee Games
+        </div>
     </div>
 
     <!-- Iframe with the game -->
