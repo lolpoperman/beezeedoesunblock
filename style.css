@@ -11,9 +11,9 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center items horizontally */
-  justify-content: flex-start; /* Align items to the top */
-  background-color: #000000; /* Black background color */
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #000000;
 }
 
 /* Header text at the top center */
@@ -41,7 +41,7 @@ body {
 
 /* Container for each icon and its tooltip */
 .icon-container {
-  position: relative; /* Position relative to contain tooltip */
+  position: relative;
 }
 
 /* Style for the icons */
@@ -69,7 +69,7 @@ body {
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s ease;
-  white-space: nowrap; /* Prevent text from wrapping */
+  white-space: nowrap;
 }
 
 /* Show tooltip on icon container hover */
