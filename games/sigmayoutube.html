@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flappy Bird with Home Button</title>
+    <title>Flappy Bird with Home Button and Label</title>
     <style>
-        /* Style for the button */
+        /* Style for the home button */
         .home-btn {
             position: absolute;
             top: 10px;
@@ -22,6 +22,18 @@
 
         .home-btn:hover {
             background-color: #0056b3;
+        }
+
+        /* Style for the label at the top center */
+        .label {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+            z-index: 1000;
         }
 
         /* Style to ensure iframe covers the full page */
@@ -48,6 +60,11 @@
     <button class="home-btn" onclick="window.location.href='https://lolpoperman.github.io/beezeedoesunblock/'">
         Home
     </button>
+
+    <!-- Top center label -->
+    <div class="label">
+        Beezee Games
+    </div>
 
     <!-- Iframe with the game -->
     <iframe src="https://lolpoperman.github.io/beezeedoesunblock/flappy-bird/">
