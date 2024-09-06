@@ -1,134 +1,83 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>beezee | V1</title>
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <style>
-        /* Reset margin and padding for consistent layout */
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
+/* Reset margin and padding for consistent layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        /* Full-height body with a black background */
-        body {
-          margin: 0;
-          height: 100vh;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: flex-start;
-          background-color: #000000;
-        }
+/* Full-height body with a black background */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #000000;
+}
 
-        /* Header text at the top center */
-        .header {
-          font-weight: bold;
-          font-size: 24px;
-          text-align: center;
-          padding: 20px;
-        }
+/* Header text at the top center */
+.header {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  padding: 20px;
+}
 
-        /* Style for the horizontal line */
-        .divider {
-          margin: 20px 0;
-          border: none;
-          height: 1px;
-          background-color: #ccc;
-        }
+/* Style for the horizontal line */
+.divider {
+  margin: 20px 0;
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+}
 
-        /* Container for positioning the icons */
-        .container {
-          display: flex;
-          justify-content: center;
-          gap: 20px;
-        }
+/* Container for positioning the icons */
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+  justify-content: center;
+  gap: 20px; /* Space between icons */
+}
 
-        /* Container for each icon and its tooltip */
-        .icon-container {
-          position: relative;
-        }
+/* Container for each icon and its tooltip */
+.icon-container {
+  flex: 1 0 150px; /* Adjust base width of icons, adjust as needed */
+  max-width: 150px; /* Prevent icon containers from getting too wide */
+  position: relative;
+}
 
-        /* Style for the icons */
-        .icon {
-          width: 100px;
-          height: 100px;
-          object-fit: cover;
-          transition: transform 0.3s ease;
-          border-radius: 15px; /* Rounded corners */
-        }
+/* Style for the icons */
+.icon {
+  width: 100%; /* Full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 15px; /* Rounded corners */
+}
 
-        .icon:hover {
-          transform: scale(1.1);
-        }
+.icon:hover {
+  transform: scale(1.1);
+}
 
-        /* Style for the tooltip text */
-        .tooltip {
-          position: absolute;
-          bottom: -25px; /* Adjust as needed */
-          left: 50%;
-          transform: translateX(-50%);
-          background-color: rgba(0, 0, 0, 0.7);
-          color: #fff;
-          padding: 5px 10px;
-          border-radius: 5px;
-          visibility: hidden;
-          opacity: 0;
-          transition: opacity 0.3s ease;
-          white-space: nowrap;
-        }
+/* Style for the tooltip text */
+.tooltip {
+  position: absolute;
+  bottom: -25px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
 
-        /* Show tooltip on icon container hover */
-        .icon-container:hover .tooltip {
-          visibility: visible;
-          opacity: 1;
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        Beezee Games | Recode In Progress...
-    </div>
-
-    <hr class="divider">
-
-    <div class="container">
-        <div class="icon-container">
-            <a href="games/sigmayoutube.html">
-                <img src="images/flappy-bird-icon.png" alt="Flappy Bird" class="icon">
-            </a>
-            <div class="tooltip">Flappy Bird</div>
-        </div>
-        <div class="icon-container">
-            <a href="games/dogeminer.html">
-                <img src="images/doge-miner-icon.png" alt="Doge Miner" class="icon">
-            </a>
-            <div class="tooltip">Doge Miner</div>
-        </div>
-        <div class="icon-container">
-            <a href="games/geodash.html">
-                <img src="images/geo-dash-icon.png" alt="Geo Dash" class="icon">
-            </a>
-            <div class="tooltip">Geo Dash</div>
-        </div>
-        <div class="icon-container">
-            <a href="games/drivemad.html">
-                <img src="images/Drive-Mad-icon.png" alt="Drive Mad" class="icon">
-            </a>
-            <div class="tooltip">Drive Mad</div>
-        </div>
-        <!-- New Icon -->
-        <div class="icon-container">
-            <a href="games/newgame.html">
-                <img src="images/new-game-icon.png" alt="New Game" class="icon">
-            </a>
-            <div class="tooltip">New Game</div>
-        </div>
-    </div>
-</body>
-</html>
+/* Show tooltip on icon container hover */
+.icon-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
