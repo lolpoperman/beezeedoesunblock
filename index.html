@@ -7,41 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <title>beezee | V1</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <style>
-        .icon {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-        }
-
-        .header {
-            font-weight: bold;
-            font-size: 24px;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .divider {
-            margin: 20px 0;
-            border: none;
-            height: 1px;
-            background-color: #ccc;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .icon {
-            transition: transform 0.3s ease;
-        }
-
-        .icon:hover {
-            transform: scale(1.1);
-        }
-    </style>
 </head>
 <body>
     <div class="header">
@@ -51,18 +16,30 @@
     <hr class="divider">
 
     <div class="container">
-        <a href="games/sigmayoutube.html">
-            <img src="images/flappy-bird-icon.png" alt="Flappy Bird" class="icon first-icon">
-        </a>
-        <a href="games/dogeminer.html">
-            <img src="images/doge-miner-icon.png" alt="Doge Miner" class="icon">
-        </a>
-        <a href="games/geodash.html">
-            <img src="images/geo-dash-icon.png" alt="Geo Dash" class="icon second-icon">
-        </a>
-        <a href="games/drivemad.html">
-            <img src="images/Drive-Mad-icon.png" alt="Drive Mad" class="icon second-icon">
-        </a>
+        <div class="icon-container">
+            <a href="games/sigmayoutube.html">
+                <img src="images/flappy-bird-icon.png" alt="Flappy Bird" class="icon">
+            </a>
+            <div class="tooltip">Flappy Bird</div>
+        </div>
+        <div class="icon-container">
+            <a href="games/dogeminer.html">
+                <img src="images/doge-miner-icon.png" alt="Doge Miner" class="icon">
+            </a>
+            <div class="tooltip">Doge Miner</div>
+        </div>
+        <div class="icon-container">
+            <a href="games/geodash.html">
+                <img src="images/geo-dash-icon.png" alt="Geo Dash" class="icon">
+            </a>
+            <div class="tooltip">Geo Dash</div>
+        </div>
+        <div class="icon-container">
+            <a href="games/drivemad.html">
+                <img src="images/Drive-Mad-icon.png" alt="Drive Mad" class="icon">
+            </a>
+            <div class="tooltip">Drive Mad</div>
+        </div>
     </div>
 </body>
 </html>
