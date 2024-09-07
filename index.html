@@ -44,18 +44,18 @@
           background-color: #ccc;
         }
 
-        /* Container for positioning the icons */
+        /* Grid container for the icons */
         .container {
-          display: flex;
-          flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
-          justify-content: center;
-          gap: 20px; /* Space between icons */
+          display: grid;
+          grid-template-columns: repeat(6, 1fr); /* Six equal columns */
+          gap: 20px; /* Space between the icons */
+          justify-items: center;
         }
 
         /* Container for each icon and its tooltip */
         .icon-container {
-          width: calc(16.66% - 20px); /* Each icon takes up 1/6th of the row with space accounted for */
-          max-width: 150px; /* Prevent icon containers from getting too wide */
+          width: 100px; /* Fixed width for each icon */
+          max-width: 100px;
           position: relative;
           box-sizing: border-box;
         }
@@ -132,6 +132,12 @@
                 <img src="images/stickmanhook.png" alt="Stickman Hook" class="icon">
             </a>
             <div class="tooltip">Stickman Hook</div>
+        </div>
+        <div class="icon-container">
+            <a href="games/sigmayoutube.html">
+                <img src="images/flappy-bird-icon.png" alt="Flappy Bird" class="icon">
+            </a>
+            <div class="tooltip">Flappy Bird</div>
         </div>
         <div class="icon-container">
             <a href="games/stickmanhook.html">
