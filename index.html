@@ -25,7 +25,6 @@
           justify-content: flex-start;
           background-color: #000000;
           overflow: hidden; /* Prevent scrollbars */
-          position: relative; /* To allow absolute positioning of text container */
         }
 
         /* Full-width and height container for particles */
@@ -45,7 +44,6 @@
           text-align: center;
           padding: 20px;
           color: white;
-          z-index: 1; /* Ensure it stays above particles */
         }
 
         /* Style for the horizontal line */
@@ -55,65 +53,14 @@
           border: none;
           height: 1px;
           background-color: #ccc;
-          z-index: 1; /* Ensure it stays above particles */
         }
 
-        /* Container for the side text */
-        .text-container {
-          position: absolute;
-          width: 100%;
-          top: 80px; /* Adjust to start below the header */
-          bottom: 0;
-          display: flex;
-          justify-content: space-between;
-          padding: 0 20px;
-          pointer-events: none; /* Prevent interaction with text */
-          z-index: 1; /* Ensure it stays above particles */
-          overflow: hidden;
-        }
-
-        /* Style for the repeating text */
-        .text-left, .text-right {
-          font-size: 18px;
-          font-weight: bold;
-          color: white;
-          text-align: center;
-          white-space: nowrap;
-          height: 100%;
-          line-height: 1.5;
-          display: flex;
-          align-items: center;
-          background: repeating-linear-gradient(
-            to bottom,
-            transparent,
-            transparent 40px,
-            rgba(255, 255, 255, 0.3) 40px,
-            rgba(255, 255, 255, 0.3) 60px
-          );
-        }
-
-        /* Adjust the repeating gradient for both sides */
-        .text-left {
-          text-align: left;
-          background-position: left;
-          flex: 1;
-          background-size: auto 100%;
-        }
-
-        .text-right {
-          text-align: right;
-          background-position: right;
-          flex: 1;
-          background-size: auto 100%;
-        }
-
-        /* Container for the icons */
+        /* Grid container for the icons */
         .container {
           display: grid;
           grid-template-columns: repeat(6, 1fr); /* Six equal columns */
           gap: 20px; /* Space between the icons */
           justify-items: center;
-          z-index: 1; /* Ensure it stays above particles */
         }
 
         /* Container for each icon and its tooltip */
@@ -158,6 +105,7 @@
           opacity: 1;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
     <div id="particles-js"></div>
@@ -167,11 +115,6 @@
     </div>
 
     <hr class="divider">
-
-    <div class="text-container">
-        <div class="text-left">Unblocked games at your fingertips</div>
-        <div class="text-right">Unblocked games at your fingertips</div>
-    </div>
 
     <div class="container">
         <div class="icon-container">
@@ -219,103 +162,116 @@
         <!-- Add more icons as needed -->
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        particlesJS("particles-js", {
-          "particles": {
-            "number": {
-              "value": 200,
-              "density": {
-                "enable": true,
-                "value_area": 600
-              }
-            },
-            "color": {
-              "value": "#ffffff"
-            },
-            "shape": {
-              "type": "circle",
-              "stroke": {
-                "width": 0,
-                "color": "#000000"
-              },
-              "polygon": {
-                "nb_sides": 5
-              },
-              "image": {
-                "src": "img/github.svg",
-                "width": 100,
-                "height": 100
-              }
-            },
-            "opacity": {
-              "value": 1,
-              "random": true,
-              "anim": {
-                "enable": false,
-                "speed": 1,
-                "opacity_min": 0.1,
-                "sync": false
-              }
-            },
-            "size": {
-              "value": 3,
-              "random": true,
-              "anim": {
-                "enable": false,
-                "speed": 40,
-                "size_min": 0.1,
-                "sync": false
-              }
-            },
-            "line_linked": {
-              "enable": false,
-              "distance": 150,
-              "color": "#ffffff",
-              "opacity": 0.4,
-              "width": 1
-            },
-            "move": {
+      particlesJS("particles-js", {
+        "particles": {
+          "number": {
+            "value": 200,
+            "density": {
               "enable": true,
-              "speed": 2,
-              "direction": "bottom",
-              "random": true,
-              "straight": false,
-              "out_mode": "out",
-              "bounce": false,
-              "attract": {
-                "enable": false,
-                "rotateX": 600,
-                "rotateY": 1200
-              }
+              "value_area": 600
             }
           },
-          "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-              "onhover": {
-                "enable": true,
-                "mode": "repulse"
-              },
-              "onclick": {
-                "enable": true,
-                "mode": "push"
-              },
-              "resize": true
+          "color": {
+            "value": "#ffffff"
+          },
+          "shape": {
+            "type": "circle",
+            "stroke": {
+              "width": 0,
+              "color": "#000000"
             },
-            "modes": {
-              "repulse": {
-                "distance": 100,
-                "duration": 0.4
-              },
-              "push": {
-                "particles_nb": 4
-              }
+            "polygon": {
+              "nb_sides": 5
+            },
+            "image": {
+              "src": "img/github.svg",
+              "width": 100,
+              "height": 100
             }
           },
-          "retina_detect": true
-        });
+          "opacity": {
+            "value": 1,
+            "random": true,
+            "anim": {
+              "enable": false,
+              "speed": 1,
+              "opacity_min": 0.1,
+              "sync": false
+            }
+          },
+          "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+              "enable": false,
+              "speed": 40,
+              "size_min": 0.1,
+              "sync": false
+            }
+          },
+          "line_linked": {
+            "enable": false,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.4,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "bottom",
+            "random": true,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+              "enable": false,
+              "rotateX": 600,
+              "rotateY": 1200
+            }
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "repulse"
+            },
+            "onclick": {
+              "enable": false,
+              "mode": "push"
+            },
+            "resize": true
+          },
+          "modes": {
+            "grab": {
+              "distance": 400,
+              "line_linked": {
+                "opacity": 1
+              }
+            },
+            "bubble": {
+              "distance": 400,
+              "size": 40,
+              "duration": 2,
+              "opacity": 8,
+              "speed": 3
+            },
+            "repulse": {
+              "distance": 40,
+              "duration": 0.4
+            },
+            "push": {
+              "particles_nb": 4
+            },
+            "remove": {
+              "particles_nb": 2
+            }
+          }
+        },
+        "retina_detect": true
       });
     </script>
 </body>
