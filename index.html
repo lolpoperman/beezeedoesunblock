@@ -60,7 +60,7 @@
 
         /* Container for the side text */
         .text-container {
-          position: fixed;
+          position: absolute;
           width: 100%;
           top: 80px; /* Adjust to start below the header */
           bottom: 0;
@@ -69,6 +69,7 @@
           padding: 0 20px;
           pointer-events: none; /* Prevent interaction with text */
           z-index: 1; /* Ensure it stays above particles */
+          overflow: hidden;
         }
 
         /* Style for the repeating text */
@@ -78,6 +79,10 @@
           color: white;
           text-align: center;
           white-space: nowrap;
+          height: 100%;
+          line-height: 1.5;
+          display: flex;
+          align-items: center;
           background: repeating-linear-gradient(
             to bottom,
             transparent,
@@ -91,11 +96,15 @@
         .text-left {
           text-align: left;
           background-position: left;
+          flex: 1;
+          background-size: auto 100%;
         }
 
         .text-right {
           text-align: right;
           background-position: right;
+          flex: 1;
+          background-size: auto 100%;
         }
 
         /* Container for the icons */
