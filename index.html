@@ -104,6 +104,33 @@
           visibility: visible;
           opacity: 1;
         }
+
+        /* Container for the text on the sides */
+        .text-container {
+          position: relative;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          padding: 0 20px;
+          margin-top: 20px; /* Adjust spacing from the divider */
+        }
+
+        /* Style for the text on the left side */
+        .text-left, .text-right {
+          font-size: 18px;
+          font-weight: bold;
+          color: white;
+        }
+
+        /* Optional: Adjust positioning to ensure it doesn't overlap content */
+        .text-left {
+          text-align: left;
+        }
+
+        /* Optional: Adjust positioning to ensure it doesn't overlap content */
+        .text-right {
+          text-align: right;
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
@@ -115,6 +142,11 @@
     </div>
 
     <hr class="divider">
+
+    <div class="text-container">
+        <div class="text-left">Unblocked games at your fingertips</div>
+        <div class="text-right">Unblocked games at your fingertips</div>
+    </div>
 
     <div class="container">
         <div class="icon-container">
@@ -211,68 +243,4 @@
             }
           },
           "line_linked": {
-            "enable": false,
-            "distance": 150,
-            "color": "#ffffff",
-            "opacity": 0.4,
-            "width": 1
-          },
-          "move": {
-            "enable": true,
-            "speed": 2,
-            "direction": "bottom",
-            "random": true,
-            "straight": false,
-            "out_mode": "out",
-            "bounce": false,
-            "attract": {
-              "enable": false,
-              "rotateX": 600,
-              "rotateY": 1200
-            }
-          }
-        },
-        "interactivity": {
-          "detect_on": "canvas",
-          "events": {
-            "onhover": {
-              "enable": true,
-              "mode": "repulse"
-            },
-            "onclick": {
-              "enable": false,
-              "mode": "push"
-            },
-            "resize": true
-          },
-          "modes": {
-            "grab": {
-              "distance": 400,
-              "line_linked": {
-                "opacity": 1
-              }
-            },
-            "bubble": {
-              "distance": 400,
-              "size": 40,
-              "duration": 2,
-              "opacity": 8,
-              "speed": 3
-            },
-            "repulse": {
-              "distance": 40,
-              "duration": 0.4
-            },
-            "push": {
-              "particles_nb": 4
-            },
-            "remove": {
-              "particles_nb": 2
-            }
-          }
-        },
-        "retina_detect": true
-      });
-    </script>
-</body>
-</html>
+            "enable
