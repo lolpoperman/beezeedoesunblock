@@ -5,104 +5,109 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>beezee | V1</title>
+    <title>Beezee | V1</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
         /* Reset margin and padding for consistent layout */
         * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        /* Full-height body with a black background */
+        /* Full-height body with a dark background */
         body {
-          margin: 0;
-          height: 100vh;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: flex-start;
-          background-color: #000000;
-          overflow: hidden; /* Prevent scrollbars */
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #121212;
+            overflow: hidden; /* Prevent scrollbars */
         }
 
         /* Full-width and height container for particles */
         #particles-js {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
-          z-index: -1; /* Ensure it stays behind other content */
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Ensure it stays behind other content */
         }
 
         /* Header text at the top center */
         .header {
-          font-weight: bold;
-          font-size: 24px;
-          text-align: center;
-          padding: 20px;
-          color: white;
+            font-weight: bold;
+            font-size: 28px;
+            text-align: center;
+            padding: 20px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
         }
 
         /* Style for the horizontal line */
         .divider {
-          width: 100%;
-          margin: 20px 0;
-          border: none;
-          height: 1px;
-          background-color: #ccc;
+            width: 60%;
+            margin: 20px 0;
+            border: none;
+            height: 1px;
+            background-color: #444;
         }
 
         /* Grid container for the icons */
         .container {
-          display: grid;
-          grid-template-columns: repeat(6, 1fr); /* Six equal columns */
-          gap: 20px; /* Space between the icons */
-          justify-items: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive grid */
+            gap: 20px; /* Space between the icons */
+            justify-items: center;
+            padding: 0 20px;
         }
 
         /* Container for each icon and its tooltip */
         .icon-container {
-          width: 100px; /* Fixed width for each icon */
-          max-width: 100px;
-          position: relative;
-          box-sizing: border-box;
+            width: 100px; /* Fixed width for each icon */
+            position: relative;
+            box-sizing: border-box;
         }
 
         /* Style for the icons */
         .icon {
-          width: 100%; /* Full width of the container */
-          height: auto; /* Maintain aspect ratio */
-          border-radius: 15px; /* Rounded corners */
-          transition: transform 0.3s ease;
+            width: 100%; /* Full width of the container */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Rounded corners */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         .icon:hover {
-          transform: scale(1.1); /* Slight zoom on hover */
+            transform: scale(1.1); /* Slight zoom on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
         }
 
         /* Style for the tooltip text */
         .tooltip {
-          position: absolute;
-          bottom: -25px; /* Adjust as needed */
-          left: 50%;
-          transform: translateX(-50%);
-          background-color: rgba(0, 0, 0, 0.7);
-          color: #fff;
-          padding: 5px 10px;
-          border-radius: 5px;
-          visibility: hidden;
-          opacity: 0;
-          transition: opacity 0.3s ease;
-          white-space: nowrap;
+            position: absolute;
+            bottom: -30px; /* Adjust as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+            padding: 8px 12px;
+            border-radius: 6px;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease, bottom 0.3s ease;
+            white-space: nowrap;
+            font-size: 14px;
         }
 
         /* Show tooltip on icon container hover */
         .icon-container:hover .tooltip {
-          visibility: visible;
-          opacity: 1;
+            visibility: visible;
+            opacity: 1;
+            bottom: -40px; /* Adjust as needed */
         }
     </style>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -157,7 +162,7 @@
             <a href="games/.html">
                 <img src="images/comingsoon.png" alt="coming soon" class="icon">
             </a>
-            <div class="tooltip">coming soon</div>
+            <div class="tooltip">Coming Soon</div>
         </div>
         <!-- Add more icons as needed -->
     </div>
@@ -180,18 +185,10 @@
             "stroke": {
               "width": 0,
               "color": "#000000"
-            },
-            "polygon": {
-              "nb_sides": 5
-            },
-            "image": {
-              "src": "img/github.svg",
-              "width": 100,
-              "height": 100
             }
           },
           "opacity": {
-            "value": 1,
+            "value": 0.8,
             "random": true,
             "anim": {
               "enable": false,
@@ -201,7 +198,7 @@
             }
           },
           "size": {
-            "value": 3,
+            "value": 4,
             "random": true,
             "anim": {
               "enable": false,
@@ -211,11 +208,7 @@
             }
           },
           "line_linked": {
-            "enable": false,
-            "distance": 150,
-            "color": "#ffffff",
-            "opacity": 0.4,
-            "width": 1
+            "enable": false
           },
           "move": {
             "enable": true,
@@ -224,12 +217,7 @@
             "random": true,
             "straight": false,
             "out_mode": "out",
-            "bounce": false,
-            "attract": {
-              "enable": false,
-              "rotateX": 600,
-              "rotateY": 1200
-            }
+            "bounce": false
           }
         },
         "interactivity": {
@@ -240,34 +228,14 @@
               "mode": "repulse"
             },
             "onclick": {
-              "enable": false,
-              "mode": "push"
+              "enable": false
             },
             "resize": true
           },
           "modes": {
-            "grab": {
-              "distance": 400,
-              "line_linked": {
-                "opacity": 1
-              }
-            },
-            "bubble": {
-              "distance": 400,
-              "size": 40,
-              "duration": 2,
-              "opacity": 8,
-              "speed": 3
-            },
             "repulse": {
-              "distance": 40,
+              "distance": 60,
               "duration": 0.4
-            },
-            "push": {
-              "particles_nb": 4
-            },
-            "remove": {
-              "particles_nb": 2
             }
           }
         },
