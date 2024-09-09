@@ -64,10 +64,9 @@
         .content-wrapper {
           display: flex;
           flex-direction: column;
-          align-items: flex-start; /* Align items to the start */
+          align-items: center; /* Center align the content wrapper itself */
           justify-content: flex-start;
           margin-top: 80px; /* Adjust this value to control vertical spacing from header */
-          padding-left: 20px; /* Add padding to match header alignment */
           position: relative; /* Ensure proper positioning of child elements */
         }
 
@@ -76,8 +75,9 @@
           display: grid;
           grid-template-columns: repeat(6, 1fr); /* Six equal columns */
           gap: 20px; /* Space between the icons */
-          justify-items: start; /* Align items to the start */
+          justify-items: start; /* Align items to the start (far left) */
           margin-top: 20px; /* Space between divider and icons */
+          width: 100%; /* Ensure the container spans the width */
         }
 
         /* Container for each icon and its tooltip */
