@@ -35,7 +35,6 @@
           top: 0;
           left: 0;
           z-index: -1; /* Ensure it stays behind other content */
-          border: 2px solid red; /* Debugging border */
         }
 
         /* Header text in the top left corner */
@@ -49,6 +48,15 @@
           top: 0; /* Align to the top */
           left: 0; /* Align to the left */
           z-index: 1; /* Ensure it's above other content */
+        }
+
+        /* Container for header and icons */
+        .content-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          margin-top: 150px; /* Adjust this value to control vertical spacing */
         }
 
         /* Style for the horizontal line */
@@ -66,6 +74,7 @@
           grid-template-columns: repeat(6, 1fr); /* Six equal columns */
           gap: 20px; /* Space between the icons */
           justify-items: center;
+          margin-top: 50px; /* Added margin to move icons down */
         }
 
         /* Container for each icon and its tooltip */
@@ -136,56 +145,58 @@
 <body>
     <div id="particles-js"></div>
 
-    <div class="header">
-        Beezee Games | Recode In Progress...
-    </div>
+    <!-- Header and icons container -->
+    <div class="content-wrapper">
+        <div class="header">
+            Beezee Games | Recode In Progress...
+        </div>
 
-    <hr class="divider">
+        <hr class="divider">
 
-    <div class="container">
-        <div class="icon-container">
-            <a href="games/sigmayoutube.html">
-                <img src="images/flappy-bird-icon.png" alt="Flappy Bird" class="icon">
-            </a>
-            <div class="tooltip">Flappy Bird</div>
+        <div class="container">
+            <div class="icon-container">
+                <a href="games/sigmayoutube.html">
+                    <img src="images/flappy-bird-icon.png" alt="Flappy Bird" class="icon">
+                </a>
+                <div class="tooltip">Flappy Bird</div>
+            </div>
+            <div class="icon-container">
+                <a href="games/dogeminer.html">
+                    <img src="images/doge-miner-icon.png" alt="Doge Miner" class="icon">
+                </a>
+                <div class="tooltip">Doge Miner</div>
+            </div>
+            <div class="icon-container">
+                <a href="games/geodash.html">
+                    <img src="images/geo-dash-icon.png" alt="Geo Dash" class="icon">
+                </a>
+                <div class="tooltip">Geo Dash</div>
+            </div>
+            <div class="icon-container">
+                <a href="games/drivemad.html">
+                    <img src="images/Drive-Mad-icon.png" alt="Drive Mad" class="icon">
+                </a>
+                <div class="tooltip">Drive Mad</div>
+            </div>
+            <div class="icon-container">
+                <a href="games/stickmanhook.html">
+                    <img src="images/stickmanhook.png" alt="Stickman Hook" class="icon">
+                </a>
+                <div class="tooltip">Stickman Hook</div>
+            </div>
+            <div class="icon-container">
+                <a href="games/bitlife.html">
+                    <img src="images/bitlifesigma.png" alt="Bitlife" class="icon">
+                </a>
+                <div class="tooltip">Bitlife 18+</div>
+            </div>
+            <div class="icon-container">
+                <a href="games/.html">
+                    <img src="images/comingsoon.png" alt="coming soon" class="icon">
+                </a>
+                <div class="tooltip">coming soon</div>
+            </div>
         </div>
-        <div class="icon-container">
-            <a href="games/dogeminer.html">
-                <img src="images/doge-miner-icon.png" alt="Doge Miner" class="icon">
-            </a>
-            <div class="tooltip">Doge Miner</div>
-        </div>
-        <div class="icon-container">
-            <a href="games/geodash.html">
-                <img src="images/geo-dash-icon.png" alt="Geo Dash" class="icon">
-            </a>
-            <div class="tooltip">Geo Dash</div>
-        </div>
-        <div class="icon-container">
-            <a href="games/drivemad.html">
-                <img src="images/Drive-Mad-icon.png" alt="Drive Mad" class="icon">
-            </a>
-            <div class="tooltip">Drive Mad</div>
-        </div>
-        <div class="icon-container">
-            <a href="games/stickmanhook.html">
-                <img src="images/stickmanhook.png" alt="Stickman Hook" class="icon">
-            </a>
-            <div class="tooltip">Stickman Hook</div>
-        </div>
-        <div class="icon-container">
-            <a href="games/bitlife.html">
-                <img src="images/bitlifesigma.png" alt="Bitlife" class="icon">
-            </a>
-            <div class="tooltip">Bitlife 18+</div>
-        </div>
-        <div class="icon-container">
-            <a href="games/.html">
-                <img src="images/comingsoon.png" alt="coming soon" class="icon">
-            </a>
-            <div class="tooltip">coming soon</div>
-        </div>
-        <!-- Add more icons as needed -->
     </div>
 
     <!-- Discord button -->
