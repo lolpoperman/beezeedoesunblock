@@ -20,7 +20,7 @@ body {
 .header {
   font-weight: bolder; /* Make the font weight bolder */
   font-size: 36px; /* Increase font size */
-  text-align: center;
+  text-align: left;
   padding: 20px;
   color: #6a1b9a; /* Dark purple color */
 }
