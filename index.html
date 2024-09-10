@@ -64,9 +64,10 @@
         .content-wrapper {
           display: flex;
           flex-direction: column;
-          align-items: center;
+          align-items: flex-start; /* Align items to the left */
           justify-content: flex-start;
           margin-top: 80px; /* Adjust this value to control vertical spacing from header */
+          padding-left: 20px; /* Add some padding to move the icons more to the left */
         }
 
         /* Grid container for the icons */
@@ -74,7 +75,7 @@
           display: grid;
           grid-template-columns: repeat(6, 1fr); /* Six equal columns */
           gap: 20px; /* Space between the icons */
-          justify-items: center;
+          justify-items: start; /* Align items to the left */
         }
 
         /* Container for each icon and its tooltip */
@@ -246,5 +247,3 @@
     </script>
 </body>
 </html>
-
-
